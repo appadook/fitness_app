@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import apis from '../../services/api'; // Import the api functions
 import './WeeksSessions.css';
 import WeekItem from './weeks/weekItem';

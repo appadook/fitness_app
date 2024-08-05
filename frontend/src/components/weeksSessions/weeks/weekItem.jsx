@@ -8,7 +8,7 @@ import './WeekItem.css';
 const WeekItem = ({ weekNumber, weekId, onDeleteWeek, onDeleteSession, workoutId }) => {
   
   const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
+  const [setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {

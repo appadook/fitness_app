@@ -2,16 +2,21 @@
   "name": "fitness_tracker",
   "version": "1.0.0",
   "private": true,
+  "main": "electron/main.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd backend && node server.js",
     "client": "cd frontend && npm start",
-    "build": "cd frontend && npm run build",
     "test": "cd frontend && npm run test",
-    "eject": "cd frontend && npm run eject"
+    "eject": "cd frontend && npm run eject",
+    "electron": "electron .",
+    "build": "cd frontend && npm run build && cd .. && npm run electron",
+    "serve": "serve -s build"
   },
   "devDependencies": {
-    "concurrently": "^6.0.0"
+    "concurrently": "^6.0.0",
+    "electron": "^31.3.1",
+    "serve": "^14.2.3"
   },
   "dependencies": {
     "react-modal": "^3.16.1"
